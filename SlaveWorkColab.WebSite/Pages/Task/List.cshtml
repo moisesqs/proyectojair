@@ -1,0 +1,60 @@
+﻿@page
+@model SlaveWorkColab.WebSite.Pages.Task.List
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Tareas";
+    ViewData["ActivePage"] = "Tasks";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/Task/List.css" />
+}
+
+<div class="top-bar">
+    <h2>TAREAS</h2>
+    <a asp-page="/Task/Add" class="create-btn">+ Crear tarea</a>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>Título</th>
+        <th>Descripción</th>
+        <th>Proyecto perteneciente</th>
+        <th>Persona asignada</th>
+        <th>Estatus</th>
+        <th>Actualizar</th>
+        <th>Borrar</th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (Model.Tasks != null && Model.Tasks.Any())
+    {
+        @foreach (var task in Model.Tasks)
+        {
+            <tr>
+                <td>@task.Title</td>
+                <td>@task.Description</td>
+                <td>@task.Project_Id</td>
+                <td>@task.Assigned_to</td>
+                <td class="status">
+                    <div class="status-circle @(task.Status == "Done" ? "status-done" : "status-todo")"></div>
+                </td>
+                <td class="icon icon-update">
+                    <a asp-page="/Task/Edit" asp-route-id="@task.Id">🔁</a>
+                </td>
+                <td class="icon icon-delete">
+                    <a asp-page="/Task/Delete" asp-route-id="@task.Id">🗑️</a>
+                </td>
+            </tr>
+        }
+    }
+    else
+    {
+        <tr>
+            <td colspan="7" class="text-center text-muted">No hay tareas registradas</td>
+        </tr>
+    }
+    </tbody>
+</table>

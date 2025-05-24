@@ -1,0 +1,49 @@
+﻿@page
+@model SlaveWorkColab.WebSite.Pages.Login.Register
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="~/css/Auth/Register.css" />
+</head>
+<body>
+<div class="register-container">
+    <h2>REGISTRO</h2>
+    <form method="post">
+        
+        <div>
+            <label asp-for="RegisterModel.Username">Usuario</label>
+            <input asp-for="RegisterModel.Username" type="text" placeholder="Usuario" required>
+            <span asp-validation-for="RegisterModel.Username" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="RegisterModel.Email">Email</label>
+            <input asp-for="RegisterModel.Email" type="email" placeholder="Email" required>
+            <span asp-validation-for="RegisterModel.Email" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="RegisterModel.Password">Contraseña</label>
+            <input asp-for="RegisterModel.Password" type="password" placeholder="Contraseña" required>
+            <span asp-validation-for="RegisterModel.Password" class="text-danger"></span>
+        </div>
+
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <button type="submit">Registrarse</button>
+    </form>
+
+    <div class="back-login">
+        <a asp-page="/Auth/Login">Volver al login</a>
+    </div>
+</div>
+</body>
+</html>

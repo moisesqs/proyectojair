@@ -1,0 +1,66 @@
+﻿@page
+@model SlaveWorkColab.WebSite.Pages.Task.Add
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Crear Tarea</title>
+    <link rel="stylesheet" href="~/css/Task/Add.css" />
+</head>
+<body>
+
+<div class="form-container">
+    <a asp-page="/Task/List" class="back">&#8592;</a>
+    <h2>CREAR TAREA</h2>
+
+    <form method="post">
+        <label asp-for="Task.Title">Título</label>
+        <input asp-for="Task.Title" id="titulo" placeholder="Título" />
+        <span asp-validation-for="Task.Title" class="text-danger"></span>
+
+        <label asp-for="Task.Description">Descripción</label>
+        <textarea asp-for="Task.Description" id="descripcion" rows="4" placeholder="Descripción"></textarea>
+        <span asp-validation-for="Task.Description" class="text-danger"></span>
+
+        <label asp-for="Task.Project_Id">Proyecto</label>
+        <select asp-for="Task.Project_Id" id="proyecto">
+            <option value="">Selecciona un proyecto</option>
+            @foreach (var p in Model.Projects)
+            {
+                <option value="@p.Id">@p.Name</option>
+            }
+        </select>
+        <span asp-validation-for="Task.Project_Id" class="text-danger"></span>
+
+        <label asp-for="Task.Assigned_to">Asignar a</label>
+        <select asp-for="Task.Assigned_to" id="asignado">
+            <option value="">Selecciona un usuario</option>
+            @foreach (var u in Model.Users)
+            {
+                <option value="@u.Id">@u.Username</option>
+            }
+        </select>
+        <span asp-validation-for="Task.Assigned_to" class="text-danger"></span>
+
+        <label asp-for="Task.Status">Estado</label>
+        <select asp-for="Task.Status">
+            <option value="ToDo">Pendiente</option>
+            <option value="Done">Completada</option>
+        </select>
+        <span asp-validation-for="Task.Status" class="text-danger"></span>
+
+        <div class="buttons">
+            <a asp-page="/Task/List" class="btn-cancel">Cancelar</a>
+            <button type="submit" class="btn-submit">Crear tarea</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

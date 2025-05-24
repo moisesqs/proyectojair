@@ -1,0 +1,39 @@
+﻿@page "{id:int}"
+@model SlaveWorkColab.WebSite.Pages.Project.DeleteModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Eliminar Plan</title>
+    <link rel="stylesheet" href="~/css/Project/Delete.css" />
+</head>
+<body>
+
+<div class="form-container">
+    <a asp-page="/Project/List" class="back">&#8592;</a>
+    <h2>ELIMINAR PLAN</h2>
+
+    <form method="post">
+        <input type="hidden" asp-for="Project.Id"/>
+
+        <label asp-for="Project.Name">Nombre</label>
+        <input asp-for="Project.Name" readonly id="nombre" class="form-readonly"/>
+
+        <label asp-for="Project.Description">Descripción</label>
+        <textarea asp-for="Project.Description" readonly id="descripcion" class="form-readonly" rows="4"></textarea>
+
+        <div class="buttons">
+            <a asp-page="/Project/List" class="btn-cancel">Cancelar</a>
+            <button type="submit" class="btn-delete">Eliminar plan</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

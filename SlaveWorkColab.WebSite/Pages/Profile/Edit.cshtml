@@ -1,0 +1,40 @@
+﻿@page
+@model SlaveWorkColab.WebSite.Pages.Profile.Edit
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Actualizar Datos</title>
+    <link rel="stylesheet" href="~/css/User/Edit.css" />
+</head>
+<body>
+
+<div class="update-container">
+    <div class="back" >&#8592;</div>
+    <h2>ACTUALIZAR DATOS</h2>
+    <form>
+        <label for="username">Usuario</label>
+        <input type="text" id="username" value="UserTest1">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" value="correodeprueba@gmail.com">
+
+        <label for="password">Contraseña</label>
+        <div class="password-wrapper">
+            <input type="password" id="password" value="12345678">
+        </div>
+        
+        <br>
+
+        <button type="submit">Actualizar datos</button>
+    </form>
+</div>
+
+</body>
+</html>

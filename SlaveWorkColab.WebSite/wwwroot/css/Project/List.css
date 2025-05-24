@@ -1,0 +1,62 @@
+﻿body {
+    background-color: rgba(133, 131, 131, 0.68);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.create-btn {
+    background-color: #28c840;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #eeeeee;
+}
+
+th, td {
+    border: 2px solid #333; /* Bordes más gruesos */
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #ccc;
+}
+
+.icon {
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.icon-update {
+    color: orange;
+}
+
+.icon-delete {
+    color: red;
+}

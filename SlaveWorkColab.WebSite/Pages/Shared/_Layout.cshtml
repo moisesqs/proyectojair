@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - Slave Work Colab</title>
+    <link rel="stylesheet" href="~/css/shared/_Layout.css" />
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body>
+    <nav class="nav-bar">
+        <h1 class="nav-title">SlaveWorkColab</h1>
+        <div class="nav-links">
+            <a asp-page="/Project/List" class="nav-link @(ViewData["ActivePage"]?.ToString() == "Projects" ? "active" : "")">Proyectos</a>
+            <a asp-page="/Task/List" class="nav-link @(ViewData["ActivePage"]?.ToString() == "Tasks" ? "active" : "")">Tareas</a>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        @RenderBody()
+    </div>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

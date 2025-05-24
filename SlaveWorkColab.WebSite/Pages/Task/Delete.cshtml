@@ -1,0 +1,45 @@
+﻿@page "{id:int}"
+@model SlaveWorkColab.WebSite.Pages.Task.DeleteModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Borrar Tarea</title>
+    <link rel="stylesheet" href="~/css/Task/Delete.css" /> 
+</head>
+<body>
+
+<div class="form-container">
+    <a asp-page="/Task/List" class="back">&#8592;</a>
+    <h2>BORRAR TAREA</h2>
+
+    <form method="post">
+        <input type="hidden" asp-for="Task.Id" />
+
+        <label asp-for="Task.Title">Título</label>
+        <input readonly asp-for="Task.Title" id="titulo" placeholder="Título" />
+
+        <label asp-for="Task.Description">Descripción</label>
+        <textarea readonly asp-for="Task.Description" id="descripcion" rows="4" placeholder="Descripción"></textarea>
+
+        <label asp-for="Task.Project_Id">Proyecto</label>
+        <input readonly asp-for="Task.Project_Id" id="proyecto" placeholder="ID del plan" />
+
+        <label asp-for="Task.Assigned_to">Persona asignada</label>
+        <input readonly asp-for="Task.Assigned_to" id="asignado" placeholder="ID del usuario" />
+
+        <div class="buttons">
+            <a asp-page="/Task/List" class="btn-cancel">Cancelar</a>
+            <button type="submit" class="btn-submit">Borrar tarea</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

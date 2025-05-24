@@ -1,0 +1,42 @@
+﻿@page
+@model SlaveWorkColab.WebSite.Pages.Profile.Data
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Perfil del Usuario</title>
+    <link rel="stylesheet" href="~/css/User/Data.css" />
+</head>
+<body>
+
+<div class="header">
+    <div class="back">&#8592;</div>
+    <h2>PERFIL DEL USUARIO</h2>
+</div>
+
+<div class="section">
+    <h3>Datos</h3>
+    <div class="info-item"><b>Username:</b> UserTest1</div>
+    <div class="info-item"><b>Email:</b> correodeprueba@gmail.com</div>
+    <div class="info-item">
+        <b>Password:</b> 
+        <span class="password" id="password">*********</span>
+    </div>
+</div>
+
+<div class="section">
+    <h3>Acciones</h3>
+    <div class="actions">
+        <button asp-page="/Profile/Edit" class="update-btn">Actualizar datos</button>
+        <button class="delete-btn">Eliminar cuenta</button>
+    </div>
+</div>
+
+</body>
+</html>

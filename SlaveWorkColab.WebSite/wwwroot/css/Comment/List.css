@@ -1,0 +1,111 @@
+﻿body {
+    background-color: #d3cfcf;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.update-btn {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+    margin: 10px 0 20px 0;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.info-item {
+    margin-bottom: 8px;
+}
+
+.info-item b {
+    display: inline-block;
+    width: 130px;
+}
+
+.comments {
+    margin-top: 30px;
+}
+
+.comment-box {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: white;
+}
+
+.comment-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-row input {
+    flex-grow: 1;
+    padding: 8px;
+    border: none;
+    background-color: #d3cfcf;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.icon-edit {
+    color: orange;
+}
+
+.icon-delete {
+    color: red;
+}
+
+.add-btn {
+    font-size: 20px;
+    color: green;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.comment-input {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.comment-input input {
+    flex-grow: 1;
+    padding: 8px;
+    background-color: #d3cfcf;
+    border: none;
+}

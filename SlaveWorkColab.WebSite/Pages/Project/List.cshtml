@@ -1,0 +1,52 @@
+﻿@page
+@model SlaveWorkColab.WebSite.Pages.Project.ListModel
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Proyectos";
+    ViewData["ActivePage"] = "Projects";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/Project/List.css" />
+}
+
+<div class="top-bar">
+    <h2>PROYECTOS</h2>
+    <a asp-page="/Project/Add" class="create-btn">+ Crear plan</a>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Actualizar</th>
+        <th>Borrar</th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (Model.Projects != null && Model.Projects.Any())
+    {
+        foreach (var project in Model.Projects)
+        {
+            <tr>
+                <td>@project.Name</td>
+                <td>@project.Description</td>
+                <td class="icon icon-update">
+                    <a asp-page="/Project/Edit" asp-route-id="@project.Id">🔁</a>
+                </td>
+                <td class="icon icon-delete">
+                    <a asp-page="/Project/Delete" asp-route-id="@project.Id">🗑️</a>
+                </td>
+            </tr>
+        }
+    }
+    else
+    {
+        <tr>
+            <td colspan="4" class="text-center text-muted">No hay proyectos registrados</td>
+        </tr>
+    }
+    </tbody>
+</table>

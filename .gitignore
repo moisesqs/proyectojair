@@ -1,0 +1,36 @@
+# Archivos de compilación
+bin/
+obj/
+
+# Archivos de Visual Studio
+.vs/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Archivos de NuGet
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+*.nuget.props
+*.nuget.targets
+
+# Archivos de publicación
+*.Publish.xml
+*.publishsettings
+
+# Archivos de caché
+.vscode/
+.idea/
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+nupkg/
+
+# Archivos de configuración local
+appsettings.Development.json
+appsettings.Local.json 

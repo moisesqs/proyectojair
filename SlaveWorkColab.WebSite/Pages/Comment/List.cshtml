@@ -1,0 +1,49 @@
+﻿@page
+@model SlaveWorkColab.WebSite.Pages.Comment.List
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información Tarea</title>
+    <link rel="stylesheet" href="~/css/Comment/List.css" />
+</head>
+<body>
+
+<div class="header">
+    <div class="back">&#8592;</div>
+    <h2>INFORMACIÓN TAREA</h2>
+    <button class="update-btn">Actualizar tarea</button>
+</div>
+
+<div class="section">
+    <h3>Datos</h3>
+    <div class="info-item"><b>Título:</b> Tarea 1</div>
+    <div class="info-item"><b>Descripción:</b> Hacer el strorlyine</div>
+    <div class="info-item"><b>Estatus:</b> Por hacer</div>
+    <div class="info-item"><b>Persona asignada:</b> Flavio</div>
+</div>
+
+<div class="comments">
+    <h3 style="text-align:center;">Comentarios</h3>
+    <div class="comment-box">
+        <div class="comment-row">
+            <input type="text" value="Yo no le sé al diseño gráfico :(" readonly>
+            <button class="icon-btn icon-edit">🔁</button>
+            <button class="icon-btn icon-delete">🗑️</button>
+        </div>
+        <div class="comment-input">
+            <button class="add-btn">➕</button>
+            <input type="text" placeholder="Agregar comentario...">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

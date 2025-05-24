@@ -1,0 +1,78 @@
+﻿body {
+    background-color: #d3cfcf;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+}
+
+.back {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.section {
+    margin-top: 30px;
+}
+
+.section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.info-item {
+    margin-bottom: 10px;
+}
+
+.info-item b {
+    display: inline-block;
+    width: 100px;
+}
+
+.password {
+    display: inline-block;
+}
+
+.toggle-password {
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.actions {
+    margin-top: 30px;
+}
+
+.actions button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.update-btn {
+    background-color: orange;
+    color: white;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+}
