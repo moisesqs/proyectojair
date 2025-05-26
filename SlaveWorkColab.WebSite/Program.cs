@@ -39,9 +39,9 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapStaticAssets();
-app.MapRazorPages()
-    .WithStaticAssets();
+//app.MapStaticAssets();
+app.MapRazorPages();
+    //.WithStaticAssets();
 
 app.MapGet("/", context =>
 {
